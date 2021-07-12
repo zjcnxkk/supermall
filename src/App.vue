@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-	  <main-topbar></main-topbar>
-	  <router-view></router-view>
+	  <keep-alive>
+	  <router-view v-if="$route.meta.keepAlive"></router-view>
+	  </keep-alive>
+	        
+	  <router-view v-if="!$route.meta.keepAlive"></router-view>
+
   </div>
 </template>
 
 <script>
-	import MainTopbar from 'components/content/MainTopbar.vue'
-	
 	export default{
 		name:'app',
 		components:{
-			MainTopbar
 		}
 	}
 </script>

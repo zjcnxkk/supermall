@@ -14,19 +14,20 @@
 			<img  slot='topbar-img' src="../../assets/img/topbar/me.svg"  alt=""/>
 			<img  slot='topbar-img-light' src="../../assets/img/topbar/me-light.svg"  alt=""/>
 		</topbar-img>
-		<topbar-img path='/login'>
+		<a href="http://localhost:8080/"><topbar-img >
 			<img  slot='topbar-img' src="../../assets/img/topbar/out.svg"  alt=""/>
 			<img  slot='topbar-img-light' src="../../assets/img/topbar/out-light.svg"  alt=""/>
 		</topbar-img>
+		</a>
 	</topbar>
 </template>
 
 <script>
-	import Topbar from '../common/Topbar.vue'
-	import TopbarItem from '../common/TopbarItem.vue'
-	import TopbarLogo from '../common/TopbarLogo.vue'
-	import Serch from '../common/Serch.vue'
-	import TopbarImg from '../common/TopbarImg.vue'
+	import Topbar from '../common/topbar/Topbar.vue'
+	import TopbarItem from '../common/topbar/TopbarItem.vue'
+	import TopbarLogo from '../common/topbar/TopbarLogo.vue'
+	import Serch from '../common/topbar/Serch.vue'
+	import TopbarImg from '../common/topbar/TopbarImg.vue'
 	
 	export default{
 		name:'MainTopbar',

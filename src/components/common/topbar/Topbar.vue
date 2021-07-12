@@ -29,9 +29,14 @@
 
 <style scoped>
 	.top-bar{
+		z-index: 9999;
 		display: flex;
 		background-color:#ffffff;
 		box-shadow: 0 4px 1px rgba(180, 180, 180, 0.1);
+		position: fixed;
+	    left: 0;
+		right: 0;
+		top: 0;
 	}
 	.top-bar-center{
 		display: flex;
@@ -48,13 +53,12 @@
 	.serch{
 		display:flex;
 		align-items: center;
-		margin-left:70px;
+		margin-left:80px;
 	}
 	.topbar-img{
-		margin-left: 30px;
+		margin-left:40px;
 		width: 10%;
 		display: flex;
-		justify-content: center;
 		align-items: center;
 	}
 </style>

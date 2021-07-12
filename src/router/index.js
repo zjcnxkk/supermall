@@ -7,6 +7,8 @@ const Home = () => import('views/home/Home')
 const Categlogue = () => import('views/catalogue/Catalogue')
 const Cart = () => import('views/cart/Cart')
 const User = () => import('views/user/User')
+const Detail = () => import('views/detail/Detail')
+const Forum = () => import('views/forum/Forum')
 
 const routes = [
      {
@@ -15,12 +17,19 @@ const routes = [
      },
      {
      	path:'/home',
-     	component:Home
+     	component:Home,
+		meta:{
+			keepAlive:true
+		}
      },
      {
      	path:'/catalogue',
      	component:Categlogue
      },
+	 {
+	 	path:'/forum',
+	 	component:Forum
+	 },
      {
      	path:'/cart',
      	component:Cart
@@ -28,7 +37,11 @@ const routes = [
      {
      	path:'/user',
      	component:User
-     } 
+     } ,
+	 {
+	 	path:'/detail/:id',
+	 	component:Detail
+	 }
 ]
 
 const router = new VueRouter({
